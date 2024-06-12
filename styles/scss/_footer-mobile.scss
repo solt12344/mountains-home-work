@@ -1,0 +1,29 @@
+@media (max-width: 1490px) {
+	.footer {
+		&__wrapper {
+			gap: 0 17em;
+		}
+	}
+}
+@media (max-width: 1220px) {
+	.footer {
+		&__wrapper {
+			flex-direction: column;
+			gap: 5em;
+		}
+	}
+}
+@media (max-width: 860px) {
+	.footer {
+		&__second-coll {
+			gap: 2em;
+		}
+	}
+}
+@media (max-width: 480px) {
+	.footer {
+		&__second-coll {
+			gap: 0.5em;
+		}
+	}
+}

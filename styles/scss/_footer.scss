@@ -1,0 +1,59 @@
+.footer {
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		padding: 6.25em 0;
+		gap: 0 32em;
+	}
+
+	&__logo {
+		font-family: $second-family;
+		font-size: clamp(16px, 4vw, 32px);
+		letter-spacing: 0.01em;
+		text-transform: uppercase;
+		margin-bottom: 1.5em;
+	}
+	&__text {
+		width: 303px;
+		margin-bottom: 7.625em;
+	}
+	&__desc {
+		font-weight: 500;
+		opacity: 0.5;
+	}
+	&__second-coll {
+		display: flex;
+		gap: 0 12.25em;
+	}
+	&__list {
+		width: 203px;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	&__logo-item {
+		font-size: clamp(10px, 2vw, 24px);
+		color: $accent;
+		margin-bottom: 0.5em;
+	}
+	&__item {
+		font-size: clamp(8px, 1.5vw, 18px);
+		position: relative;
+	}
+	&__item::before {
+		content: "";
+		position: absolute;
+		background-color: $accent;
+		height: 1px;
+		width: 0%;
+		bottom: -1px;
+	}
+}
+@media (hover: hover) {
+	.footer {
+		&__item:hover::before {
+			transition: 0.3s;
+			width: 100%;
+		}
+	}
+}
