@@ -1,6 +1,8 @@
 @media (max-width: 1050px) {
 	.about {
 		&__wrapper {
+			margin-top: 5%;
+			gap: 4em;
 			flex-direction: column;
 			padding: 2.5em 0;
 		}
