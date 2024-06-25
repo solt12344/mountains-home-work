@@ -455,24 +455,6 @@ body {
   line-height: 100%;
   opacity: 0.1;
 }
-.about__text {
-  position: relative;
-  font-weight: 800;
-  font-size: 18px;
-  letter-spacing: 0.33em;
-  text-transform: uppercase;
-  color: #fbd784;
-  margin: 0 0 1.625em 96px;
-}
-.about__text::before {
-  content: "";
-  top: 50%;
-  left: -96px;
-  position: absolute;
-  height: 2px;
-  width: 72px;
-  background-color: #fbd784;
-}
 .about__title {
   font-family: "Chronicle Display", Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -495,15 +477,10 @@ body {
   color: #fbd784;
 }
 .about__svg-wrapper {
-  position: relative;
   width: 24px;
   height: 16px;
-  fill: none;
 }
 .about__svg-wrapper svg {
-  top: 0;
-  left: 0;
-  position: absolute;
   fill: #fbd784;
 }
 .about__img-wrap {
@@ -625,5 +602,178 @@ body {
   .footer__second-coll {
     gap: 1.5em;
     flex-direction: column;
+  }
+}
+.header {
+  background-image: url("../../img/header-img/header-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 200dvh;
+  margin-bottom: -470px;
+}
+.header .container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1790px;
+}
+.header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.625em 0 12.375em;
+}
+.header__list {
+  display: flex;
+  gap: 0 40px;
+  align-items: center;
+}
+.header__user-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+.header__svg-wrap {
+  width: 16px;
+  height: 24px;
+}
+.header__btn {
+  display: none;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: center;
+}
+.header__svg-user-wrap {
+  width: 20px;
+  height: 20px;
+}
+.header__title {
+  font-family: "Chronicle Display", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: clamp(24px, 5vw, 88px);
+  line-height: 114%;
+  max-width: 950px;
+  text-transform: capitalize;
+  margin-top: 32px;
+}
+.header__arrow-wrap {
+  display: flex;
+  margin-top: 32px;
+  gap: 0 16px;
+}
+.header__btn-menu {
+  display: none;
+}
+
+.logo {
+  font-family: "Chronicle Display", Arial, Helvetica, sans-serif;
+  font-size: clamp(20px, 3vw, 32px);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.link {
+  position: relative;
+}
+.link::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 0px;
+  transition: 0.3s;
+}
+.link:hover::before {
+  width: 100%;
+}
+
+.text {
+  position: relative;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.33em;
+  text-transform: uppercase;
+  color: #fbd784;
+  margin: 0 0 1.625em 96px;
+}
+.text::before {
+  content: "";
+  top: 50%;
+  left: -96px;
+  position: absolute;
+  height: 2px;
+  width: 72px;
+  background-color: #fbd784;
+}
+
+.svg-wrapper {
+  position: relative;
+  fill: none;
+}
+.svg-wrapper svg {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 850px) {
+  .header {
+    position: relative;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__nav_open {
+    display: block;
+    position: absolute;
+    top: calc(9% + 5px);
+    right: 10px;
+    border: #fbd784 3px solid;
+    border-radius: 10%;
+    padding: 5px;
+  }
+  .header__list {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .header__btn-menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .header__btn-menu_open .header__line:nth-last-of-type(1) {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__btn-menu_open .header__line:nth-last-of-type(2) {
+    display: none;
+  }
+  .header__btn-menu_open .header__line:nth-last-of-type(3) {
+    transform: rotate(-45deg);
+    top: 9px;
+  }
+  .header__line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #0b1d26;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .header__line:nth-of-type(1) {
+    top: 0;
+  }
+  .header__line:nth-of-type(2) {
+    top: 9px;
+  }
+  .header__line:nth-of-type(3) {
+    top: 18px;
   }
 }/*# sourceMappingURL=style.css.map */
